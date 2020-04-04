@@ -7,12 +7,13 @@
 
 3.  The root directory contains README file, solution file and projects folders  
 
-4. Following bullet point explains about projects and their structure.
+4. Following bullet points explains about projects and their structure.
 --- 
  - <b> KoganCubic</b>
-  - This project is the .net core MVC application. It calls the API endpoint <b>asynchronous</b>   - The `Home` controller implements  `Calculate` action and call the `Calculate` service . 
-  - The `Calculate` service has dependency on `CalculaterClient` for getting the content from API. The `Calculator` service makes continuous calls to pages of API and calculate the parcel's 'Cubic weight' in `Air conditioner` category
-  - The `CalculatorClient` has dependency on singleton object of .Net `HttpClient` and its responsibility is to fetch and deserialize the  API response 
+  - This project is the .net core MVC application. It calls the API endpoint <b>asynchronous</b>   - The `Home` controller implements  `Calculate` action and calls the `Calculate` service . 
+  - The `Calculate` class has dependency on `CalculaterClient` for getting the content from API. The `Calculator` service makes continuous calls to pages of API and calculates the parcel's 'Cubic weight' in `Air conditioner` category
+  - The `CalculatorClient` class has dependency on singleton object of .Net `HttpClient` and its responsibility is to fetch and deserialize the  API response 
+  - The `Model` folder contains the `POCO` classes including the API response and calculation response
 - <b>KobagCubic.Test </b>
   - This is the unit test project of the solution. 
   - Unit test implements `ICalculatorClient` as fake client and returns mock data
@@ -24,7 +25,12 @@
 - <b>docker-compose project </b>
   - This is the docker compose project which pulls .net core images and build the web project 
   - It runs the backend on port 5001.
-  - 
+  
+### Good practices implemented in this coding challenge
+- Asynchronous Programming : To avoid UI freeze, client and services calculate and return the data in asynchronous format.
+- Single responsibility : Each class and service like `Calculator` and `CalculatorClient` is responsible for a single and isolated task.
+- Dependency Injection : by using the built-in DI container of .Net core framework, each class simply accept its dependency and DI container is responsible to resolve the scope and type of dependencies. 
+
 
 #### How to run the project using docker 
 
