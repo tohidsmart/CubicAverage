@@ -41,8 +41,9 @@
 
 #### OR  run the project using visual studio
 1. Open the solution `sln` file in visual studio
-2. right click on `KoganCubic ` project and set as Startup project
-3. Click on `IIS Express` and it should display the home page in browser : https://localhost:44387/
+2. Build the solution by right click on Solution and click `Build solution` 
+3. right click on `KoganCubic ` project and set as Startup project
+4. Click on `IIS Express` and it should display the home page in browser : https://localhost:44387/
 
 ---
 <b>Example of the screen when application loads</b>
