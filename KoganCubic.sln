@@ -3,12 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoganCubic", "KoganCubic\KoganCubic.csproj", "{8341CC72-609C-4DAB-BEF2-A3C4D0B39B04}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{437C6E39-3A35-49C9-98E5-24A719220BE5}"
 	ProjectSection(SolutionItems) = preProject
+		..\CarSales\docker-compose.yml = ..\CarSales\docker-compose.yml
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KoganCubic", "src\KoganCubic\KoganCubic.csproj", "{5AE43C54-D9C1-431C-AA96-840C3673553C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KoganCubic.Test", "src\KoganCubic.Test\KoganCubic.Test.csproj", "{4DD22AFF-EDB7-4F4D-B00C-E77DFEDA61DC}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{6CD16B72-E493-49EA-AC4E-1AEDE293F843}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,10 +21,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8341CC72-609C-4DAB-BEF2-A3C4D0B39B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8341CC72-609C-4DAB-BEF2-A3C4D0B39B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8341CC72-609C-4DAB-BEF2-A3C4D0B39B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8341CC72-609C-4DAB-BEF2-A3C4D0B39B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AE43C54-D9C1-431C-AA96-840C3673553C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE43C54-D9C1-431C-AA96-840C3673553C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AE43C54-D9C1-431C-AA96-840C3673553C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE43C54-D9C1-431C-AA96-840C3673553C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD22AFF-EDB7-4F4D-B00C-E77DFEDA61DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD22AFF-EDB7-4F4D-B00C-E77DFEDA61DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD22AFF-EDB7-4F4D-B00C-E77DFEDA61DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD22AFF-EDB7-4F4D-B00C-E77DFEDA61DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD16B72-E493-49EA-AC4E-1AEDE293F843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD16B72-E493-49EA-AC4E-1AEDE293F843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD16B72-E493-49EA-AC4E-1AEDE293F843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD16B72-E493-49EA-AC4E-1AEDE293F843}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

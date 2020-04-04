@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["KoganCubic/KoganCubic.csproj", "KoganCubic/"]
-RUN dotnet restore "KoganCubic/KoganCubic.csproj"
+COPY ["src/KoganCubic/KoganCubic.csproj", "src/KoganCubic/"]
+RUN dotnet restore "src/KoganCubic/KoganCubic.csproj"
 COPY . .
-WORKDIR "/src/KoganCubic"
+WORKDIR "/src/src/KoganCubic"
 RUN dotnet build "KoganCubic.csproj" -c Release -o /app/build
 
 FROM build AS publish

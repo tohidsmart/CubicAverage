@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h3 class="display-4">Welcome</h3>
+        <p>This simple we page calculates the average cubic weight of parcels in <em>Air Conditioner</em> category and returns some statistics <br />
+        Simpley click on the button below and wait for the result</p>
+        @using (Html.BeginForm())
+        {
+            <button type="submit" id="calculate" class="btn btn-primary" asp-action="Calculate"> Calculate</button>
+        }
+
+    </div>
+
+    <div class="loading" id="loading">Loading&#8230;</div>

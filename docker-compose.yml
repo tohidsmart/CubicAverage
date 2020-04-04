@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  kogancubic:
+    image: ${DOCKER_REGISTRY-}kogancubic
+    build:
+      context: .
+      dockerfile: src/KoganCubic/Dockerfile
+    ports:
+    - 5000:80
+    - 5001:443

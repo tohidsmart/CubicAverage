@@ -1,29 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using KoganCubic.Models;
+using KoganCubic.Services;
 
 namespace KoganCubic.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+  
+        private readonly ICubicCalculator calculator;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ICubicCalculator calculator)
         {
-            _logger = logger;
+            this.calculator= calculator;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Calculate()
         {
-            return  View();
+            var response=await calculator.GetAverageAsync();
+            return  View(response);
         }
 
-        
+        public IActionResult Index()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
