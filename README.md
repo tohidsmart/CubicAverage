@@ -1,4 +1,4 @@
-﻿# Kogan cubic weight calculator
+﻿# Cubic weight calculator
 
 
 ### Solution Structure and Programming Language 
@@ -38,12 +38,13 @@
 3. Click on `IIS Express` and it should display the home page in browser : https://localhost:44387/
 
 <b>Example of the screen when application loads</b>
-![File](./Images/file.png)
+
+![File](./Images/file.PNG)
 
 <b>Example of the screen of Average cubic weight report</b>
 
-![File2](./Images/file2.png)
+![File2](./Images/file2.PNG)
 
 <b> Test result </b>
 
-![File3](./Images/file3.png)
+![File3](./Images/file3.PNG)
