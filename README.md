@@ -10,10 +10,10 @@
 4. Following bullet points explains about projects and their structure.
 --- 
  - <b> KoganCubic</b>
-  - This project is the .net core MVC application. It calls the API endpoint <b>asynchronous</b>   - The `Home` controller implements  `Calculate` action and calls the `Calculate` service . 
-  - The `Calculate` class has dependency on `CalculaterClient` for getting the content from API. The `Calculator` service makes continuous calls to pages of API and calculates the parcel's 'Cubic weight' in `Air conditioner` category
-  - The `CalculatorClient` class has dependency on singleton object of .Net `HttpClient` and its responsibility is to fetch and deserialize the  API response 
-  - The `Model` folder contains the `POCO` classes including the API response and calculation response
+    - This project is the .net core MVC application. It calls the API endpoint <b>asynchronous</b>   - The `Home` controller implements  `Calculate` action and calls the `Calculate` service . 
+    - The `Calculate` class has dependency on `CalculaterClient` for getting the content from API. The `Calculator` service makes continuous calls to pages of API and calculates the parcel's 'Cubic weight' in `Air conditioner` category
+    - The `CalculatorClient` class has dependency on singleton object of .Net `HttpClient` and its responsibility is to fetch and deserialize the  API response 
+    - The `Model` folder contains the `POCO` classes including the API response and calculation response
 - <b>KobagCubic.Test </b>
   - This is the unit test project of the solution. 
   - Unit test implements `ICalculatorClient` as fake client and returns mock data
